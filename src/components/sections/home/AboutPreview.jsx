@@ -4,7 +4,7 @@ import Container from "@/components/layout/Container";
 import Button from "@/components/ui/Button";
 import SectionHeading from "@/components/ui/SectionHeading";
 import AnimatedCounter from "@/components/ui/AnimatedCounter";
-import { ABOUT_SYSTEM_LOG, ABOUT_METRICS, ABOUT_PILLARS } from "@/constants/about";
+import { ABOUT_METRICS, ABOUT_PILLARS } from "@/constants/about";
 
 const TRUST_POINTS = [
   { id: "licensed", label: "Licensed & insured", icon: ShieldCheck },
@@ -33,26 +33,6 @@ export default function AboutPreview() {
       />
 
       <Container>
-        {/* System status strip */}
-        <div className="mb-14 hidden animate-fade-up flex-wrap items-center justify-between gap-4 border-b border-border pb-4 sm:flex">
-          <div className="flex items-center gap-2.5">
-            <span className="relative flex size-2">
-              <span className="absolute inline-flex size-full animate-ping rounded-full bg-primary-500 opacity-75" aria-hidden="true" />
-              <span className="relative inline-flex size-2 rounded-full bg-primary-500" aria-hidden="true" />
-            </span>
-            <span className="font-mono-hud text-[11px] uppercase text-text-light">
-              company_profile.sys
-            </span>
-          </div>
-          <div className="flex flex-wrap gap-x-6 gap-y-2">
-            {ABOUT_SYSTEM_LOG.map((item) => (
-              <span key={item.id} className="font-mono-hud text-[11px] uppercase text-text-light">
-                {item.label} <span className="text-secondary-800">{item.value}</span>
-              </span>
-            ))}
-          </div>
-        </div>
-
         <div className="grid gap-16 lg:grid-cols-2 lg:items-center lg:gap-12">
           {/* Visual / scan frame */}
           <div className="relative mx-auto w-full max-w-lg lg:mx-0 lg:max-w-none">
@@ -86,9 +66,6 @@ export default function AboutPreview() {
                     <span className="size-2.5 rounded-full border-2 border-white bg-primary-500 shadow-glow" />
                   </div>
 
-                  <div className="absolute bottom-3 left-3 rounded-md bg-secondary-900/70 px-2.5 py-1 font-mono-hud text-[10px] text-white backdrop-blur-sm">
-                    FEED // ON-SITE_01
-                  </div>
                 </div>
 
                 <HudCorners />

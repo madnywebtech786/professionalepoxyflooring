@@ -1,11 +1,5 @@
 import { Radar, ScanLine, Layers, ShieldCheck, Target, HeartHandshake, Leaf, Gauge, Compass } from "lucide-react";
 
-export const ABOUT_SYSTEM_LOG = [
-  { id: "founded", label: "Est.", value: "2009" },
-  { id: "status", label: "Status", value: "Active" },
-  { id: "coverage", label: "Coverage", value: "Calgary, AB" },
-];
-
 export const ABOUT_METRICS = [
   { id: "experience", value: 15, suffix: "+", label: "Years in Operation", code: "OPS-01" },
   { id: "projects", value: 1200, suffix: "+", label: "Floors Deployed", code: "OPS-02" },

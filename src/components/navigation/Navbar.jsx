@@ -38,7 +38,7 @@ export default function Navbar() {
   return (
     <>
     <header
-      className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ease-premium ${
+      className={`fixed inset-x-0 top-10 z-50 transition-all duration-300 ease-premium ${
         isScrolled
           ? "border-b border-border bg-white/80 shadow-soft backdrop-blur-lg"
           : "bg-transparent"

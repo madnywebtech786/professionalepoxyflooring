@@ -15,22 +15,6 @@ export default function AboutMissionVision() {
       />
 
       <Container className="relative flex flex-col gap-10">
-        {/* Console header */}
-        <div className="flex animate-fade-up flex-wrap items-center justify-between gap-4 border-b border-border pb-4">
-          <div className="flex items-center gap-2.5">
-            <span className="relative flex size-2">
-              <span className="absolute inline-flex size-full animate-ping rounded-full bg-primary-500 opacity-75" aria-hidden="true" />
-              <span className="relative inline-flex size-2 rounded-full bg-primary-500" aria-hidden="true" />
-            </span>
-            <span className="font-mono-hud text-[11px] uppercase text-text-light">
-              directive.core // dual_read
-            </span>
-          </div>
-          <span className="font-mono-hud text-[11px] uppercase text-text-light">
-            SYNC <span className="text-primary-600">100%</span>
-          </span>
-        </div>
-
         {/* Dual-core panel */}
         <div className="relative grid overflow-hidden rounded-4xl shadow-card lg:grid-cols-2">
           {/* Corner brackets frame the whole console */}

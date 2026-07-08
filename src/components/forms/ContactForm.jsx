@@ -15,14 +15,18 @@ const inputClasses =
 
 const SERVICE_OPTIONS = SERVICES.map((service) => ({ value: service.id, label: service.title }));
 
+const FALLBACK_ERROR_MESSAGE = "Something went wrong. Please try again or call us directly.";
+
 export default function ContactForm() {
   const [status, setStatus] = useState("idle"); // idle | success | error
+  const [errorMessage, setErrorMessage] = useState(FALLBACK_ERROR_MESSAGE);
 
   const {
     register,
     handleSubmit,
     reset,
     control,
+    setError,
     formState: { errors, isSubmitting },
   } = useForm({
     resolver: zodResolver(contactFormSchema),
@@ -45,11 +49,25 @@ export default function ContactForm() {
         body: JSON.stringify(data),
       });
 
-      if (!response.ok) throw new Error("Request failed");
+      const result = await response.json().catch(() => null);
+
+      if (!response.ok) {
+        if (response.status === 400 && result?.errors) {
+          Object.entries(result.errors).forEach(([field, messages]) => {
+            if (messages?.[0]) {
+              setError(field, { type: "server", message: messages[0] });
+            }
+          });
+        }
+        setErrorMessage(result?.message || FALLBACK_ERROR_MESSAGE);
+        setStatus("error");
+        return;
+      }
 
       setStatus("success");
       reset();
     } catch {
+      setErrorMessage(FALLBACK_ERROR_MESSAGE);
       setStatus("error");
     }
   };
@@ -163,7 +181,7 @@ export default function ContactForm() {
           className="flex items-center gap-2 rounded-lg bg-danger/10 px-4 py-3 text-sm font-medium text-danger"
         >
           <XCircle className="size-5 shrink-0" aria-hidden="true" />
-          Something went wrong. Please try again or call us directly.
+          {errorMessage}
         </p>
       )}
     </form>

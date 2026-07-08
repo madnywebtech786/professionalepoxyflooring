@@ -58,9 +58,7 @@ export default function AboutStory() {
                 <div className="absolute inset-x-0 h-1/3 animate-scan bg-gradient-to-b from-transparent via-primary-400/25 to-transparent" />
               </div>
 
-              <div className="absolute bottom-3 left-3 rounded-md bg-secondary-900/70 px-2.5 py-1 font-mono-hud text-[10px] text-white backdrop-blur-sm">
-                ARCHIVE // ORIGIN
-              </div>
+             
             </div>
 
             <HudCorners />

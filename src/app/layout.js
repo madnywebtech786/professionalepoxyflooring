@@ -1,6 +1,8 @@
 import { Space_Grotesk, Manrope, JetBrains_Mono } from "next/font/google";
+import TopBar from "@/components/navigation/TopBar";
 import Navbar from "@/components/navigation/Navbar";
 import Footer from "@/components/navigation/Footer";
+import SocialRail from "@/components/navigation/SocialRail";
 import {
   COMPANY_NAME,
   COMPANY_PHONE,
@@ -8,7 +10,6 @@ import {
   COMPANY_CITY,
   COMPANY_REGION_SHORT,
   COMPANY_COUNTRY,
-  COMPANY_HOURS,
   SOCIAL_LINKS,
 } from "@/constants/company";
 import { WORKING_AREAS } from "@/constants/areas";
@@ -94,7 +95,6 @@ const localBusinessJsonLd = {
     addressRegion: COMPANY_REGION_SHORT,
     addressCountry: COMPANY_COUNTRY,
   },
-  openingHours: COMPANY_HOURS,
   sameAs: Object.values(SOCIAL_LINKS),
 };
 
@@ -109,8 +109,10 @@ export default function RootLayout({ children }) {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }}
         />
+        <TopBar />
         <Navbar />
         {children}
+        <SocialRail />
         <Footer />
       </body>
     </html>

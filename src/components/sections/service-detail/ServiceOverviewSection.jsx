@@ -25,10 +25,10 @@ export default function ServiceOverviewSection({ service }) {
 
         <div className="hud-panel relative flex flex-col overflow-hidden rounded-2xl shadow-card">
           <div className="flex items-center justify-between border-b border-primary-900/10 px-6 py-4">
-            <span className="font-mono-hud text-[10px] uppercase text-text-light">
-              best_fit.sys // environments
+            <span className="text-xs font-semibold uppercase tracking-[0.12em] text-text-light">
+              Best For
             </span>
-            <span className="flex items-center gap-1.5 font-mono-hud text-[10px] uppercase text-primary-600">
+            <span className="flex items-center gap-1.5 text-xs font-semibold uppercase tracking-[0.12em] text-primary-600">
               <span className="size-1.5 rounded-full bg-primary-500" aria-hidden="true" />
               {service.bestFor.length} matched
             </span>

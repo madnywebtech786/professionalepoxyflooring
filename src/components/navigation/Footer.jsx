@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Mail, MapPin, Phone } from "lucide-react";
 import Container from "@/components/layout/Container";
-import { FacebookIcon, InstagramIcon, LinkedinIcon } from "@/components/ui/SocialIcons";
+import { FacebookIcon, InstagramIcon, TiktokIcon } from "@/components/ui/SocialIcons";
 import { NAV_LINKS } from "@/constants/navigation";
 import { SERVICES } from "@/constants/services";
 import {
@@ -16,7 +16,7 @@ import {
 const SOCIALS = [
   { key: "facebook", label: "Facebook", href: SOCIAL_LINKS.facebook, icon: FacebookIcon },
   { key: "instagram", label: "Instagram", href: SOCIAL_LINKS.instagram, icon: InstagramIcon },
-  { key: "linkedin", label: "LinkedIn", href: SOCIAL_LINKS.linkedin, icon: LinkedinIcon },
+  { key: "tiktok", label: "TikTok", href: SOCIAL_LINKS.tiktok, icon: TiktokIcon },
 ];
 
 export default function Footer() {

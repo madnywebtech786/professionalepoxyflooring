@@ -383,3 +383,7 @@ export const SERVICES = [
 export function getServiceBySlug(slug) {
   return SERVICES.find((service) => service.slug === slug);
 }
+
+export function getServiceById(id) {
+  return SERVICES.find((service) => service.id === id);
+}

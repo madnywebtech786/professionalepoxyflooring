@@ -16,10 +16,10 @@ export function InstagramIcon(props) {
   );
 }
 
-export function LinkedinIcon(props) {
+export function TiktokIcon(props) {
   return (
     <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" {...props}>
-      <path d="M6.94 8.5H4.06V20h2.88V8.5ZM5.5 4a1.67 1.67 0 1 0 0 3.34A1.67 1.67 0 0 0 5.5 4ZM20 20v-6.4c0-3.06-1.63-4.48-3.8-4.48-1.75 0-2.53.96-2.97 1.64V8.5H10.35c.04.83 0 8.5 0 8.5h2.88v-6.15c0-.33.02-.66.12-.9.26-.66.86-1.34 1.86-1.34 1.31 0 1.84.99 1.84 2.45V20H20Z" />
+      <path d="M16.5 3h-2.7v12.1a2.7 2.7 0 1 1-1.9-2.58V9.7a5.4 5.4 0 1 0 4.6 5.34V9.15a6.9 6.9 0 0 0 4 1.28V7.7a4.2 4.2 0 0 1-4-4.7Z" />
     </svg>
   );
 }

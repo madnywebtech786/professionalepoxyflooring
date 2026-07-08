@@ -2,12 +2,11 @@ import { Mail, MapPin, Clock } from "lucide-react";
 import Container from "@/components/layout/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
 import ContactForm from "@/components/forms/ContactForm";
-import { COMPANY_EMAIL, COMPANY_ADDRESS, COMPANY_HOURS } from "@/constants/company";
+import { COMPANY_EMAIL, COMPANY_ADDRESS } from "@/constants/company";
 
 const DETAILS = [
   { icon: Mail, label: "Email", value: COMPANY_EMAIL },
   { icon: MapPin, label: "Address", value: COMPANY_ADDRESS },
-  { icon: Clock, label: "Hours", value: COMPANY_HOURS },
 ];
 
 export default function ContactSection({ background = "surface" }) {

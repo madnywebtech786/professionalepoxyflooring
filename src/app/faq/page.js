@@ -47,25 +47,13 @@ export default function FAQPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <section className="relative isolate overflow-hidden bg-white pt-36 pb-20 lg:pt-44 lg:pb-24">
+      <section className="relative isolate overflow-hidden bg-white pt-40 pb-20 lg:pt-48 lg:pb-24">
         <div className="pointer-events-none absolute inset-0 -z-10" aria-hidden="true">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_20%,rgba(47,168,230,0.14),transparent_45%),radial-gradient(circle_at_85%_10%,rgba(12,35,68,0.10),transparent_40%)]" />
           <div className="absolute left-1/2 top-1/4 h-144 w-xl -translate-x-1/2 rounded-full bg-primary-200/25 blur-3xl animate-drift" />
         </div>
 
         <Container className="flex flex-col gap-14">
-          <div className="flex animate-fade-up flex-wrap items-center justify-between gap-4 border-b border-border pb-4">
-            <div className="flex items-center gap-2.5">
-              <span className="relative flex size-2">
-                <span className="absolute inline-flex size-full animate-ping rounded-full bg-primary-500 opacity-75" aria-hidden="true" />
-                <span className="relative inline-flex size-2 rounded-full bg-primary-500" aria-hidden="true" />
-              </span>
-              <span className="font-mono-hud text-[11px] uppercase text-text-light">
-                knowledge_base.sys // {String(FAQS.length).padStart(2, "0")}_entries
-              </span>
-            </div>
-          </div>
-
           <SectionHeading
             eyebrow="FAQ"
             title="Frequently asked questions"

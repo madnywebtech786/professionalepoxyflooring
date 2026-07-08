@@ -10,36 +10,14 @@ export default function ServiceHero({ service, index, total }) {
   const Icon = service.icon;
 
   return (
-    <section className="relative isolate overflow-hidden bg-white pt-36 pb-16 lg:pt-44 lg:pb-20">
+    <section className="relative isolate overflow-hidden bg-white pt-40 pb-16 lg:pt-48 lg:pb-20">
       <div className="pointer-events-none absolute inset-0 -z-10" aria-hidden="true">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_20%,rgba(47,168,230,0.14),transparent_45%),radial-gradient(circle_at_85%_10%,rgba(12,35,68,0.10),transparent_40%)]" />
         <div className="absolute left-1/2 top-1/4 h-144 w-xl -translate-x-1/2 rounded-full bg-primary-200/25 blur-3xl animate-drift" />
       </div>
 
       <Container className="flex flex-col gap-14">
-        {/* Breadcrumb / system status strip */}
-        <nav aria-label="Breadcrumb" className="flex animate-fade-up flex-wrap items-center justify-between gap-4 border-b border-border pb-4">
-          <ol className="flex items-center gap-1.5 font-mono-hud text-[11px] uppercase text-text-light">
-            <li>
-              <Link href="/" className="transition-colors duration-200 hover:text-primary-600">
-                Home
-              </Link>
-            </li>
-            <ChevronRight className="size-3" aria-hidden="true" />
-            <li>
-              <Link href="/services" className="transition-colors duration-200 hover:text-primary-600">
-                Services
-              </Link>
-            </li>
-            <ChevronRight className="size-3" aria-hidden="true" />
-            <li className="text-secondary-800" aria-current="page">
-              {service.title}
-            </li>
-          </ol>
-          <span className="font-mono-hud text-[11px] uppercase text-text-light">
-            System <span className="text-secondary-800">{String(index + 1).padStart(2, "0")} / {String(total).padStart(2, "0")}</span>
-          </span>
-        </nav>
+    
 
         <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
           <div className="flex flex-col gap-8">
@@ -101,9 +79,6 @@ export default function ServiceHero({ service, index, total }) {
                   <div className="absolute inset-x-0 h-1/3 animate-scan bg-gradient-to-b from-transparent via-primary-400/25 to-transparent" />
                 </div>
 
-                <div className="absolute bottom-3 left-3 rounded-md bg-secondary-900/70 px-2.5 py-1 font-mono-hud text-[10px] text-white backdrop-blur-sm">
-                  SYSTEM // {service.slug.replace(/-/g, "_")}
-                </div>
               </div>
 
               <span className="hud-corner top-0 left-0 border-t-2 border-l-2 rounded-tl-md" aria-hidden="true" />

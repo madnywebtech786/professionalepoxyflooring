@@ -2,37 +2,17 @@ import { ShieldCheck, MapPin } from "lucide-react";
 import Container from "@/components/layout/Container";
 import AnimatedCounter from "@/components/ui/AnimatedCounter";
 import Badge from "@/components/ui/Badge";
-import { ABOUT_SYSTEM_LOG, ABOUT_METRICS, ABOUT_MISSION } from "@/constants/about";
+import { ABOUT_METRICS, ABOUT_MISSION } from "@/constants/about";
 
 export default function AboutHero() {
   return (
-    <section className="relative isolate overflow-hidden bg-white pt-36 pb-20 lg:pt-44 lg:pb-24">
+    <section className="relative isolate overflow-hidden bg-white pt-40 pb-20 lg:pt-48 lg:pb-24">
       <div className="pointer-events-none absolute inset-0 -z-10" aria-hidden="true">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_20%,rgba(47,168,230,0.14),transparent_45%),radial-gradient(circle_at_85%_10%,rgba(12,35,68,0.10),transparent_40%)]" />
         <div className="absolute left-1/2 top-1/4 h-144 w-xl -translate-x-1/2 rounded-full bg-primary-200/25 blur-3xl animate-drift" />
       </div>
 
       <Container className="flex flex-col gap-14">
-        {/* System status strip */}
-        <div className="hidden animate-fade-up flex-wrap items-center justify-between gap-4 border-b border-border pb-4 sm:flex">
-          <div className="flex items-center gap-2.5">
-            <span className="relative flex size-2">
-              <span className="absolute inline-flex size-full animate-ping rounded-full bg-primary-500 opacity-75" aria-hidden="true" />
-              <span className="relative inline-flex size-2 rounded-full bg-primary-500" aria-hidden="true" />
-            </span>
-            <span className="font-mono-hud text-[11px] uppercase text-text-light">
-              company_profile.sys // about
-            </span>
-          </div>
-          <div className="flex flex-wrap gap-x-6 gap-y-2">
-            {ABOUT_SYSTEM_LOG.map((item) => (
-              <span key={item.id} className="font-mono-hud text-[11px] uppercase text-text-light">
-                {item.label} <span className="text-secondary-800">{item.value}</span>
-              </span>
-            ))}
-          </div>
-        </div>
-
         <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-stretch">
           <div className="flex flex-col justify-center gap-8">
             <Badge icon={ShieldCheck} className="animate-fade-down" style={{ animationDelay: "0ms" }}>

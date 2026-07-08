@@ -8,7 +8,7 @@ import { HERO_STATS } from "@/constants/stats";
 
 export default function Hero() {
   return (
-    <section className="relative isolate overflow-hidden bg-white pt-36 pb-24 lg:pt-44 lg:pb-32">
+    <section className="relative isolate overflow-hidden bg-white pt-40 pb-24 lg:pt-48 lg:pb-32">
       {/* Ambient background mesh */}
       <div className="pointer-events-none absolute inset-0 -z-10" aria-hidden="true">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_20%,rgba(47,168,230,0.14),transparent_45%),radial-gradient(circle_at_85%_10%,rgba(12,35,68,0.10),transparent_40%),radial-gradient(circle_at_50%_100%,rgba(47,168,230,0.08),transparent_50%)]" />
