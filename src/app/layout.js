@@ -3,6 +3,7 @@ import TopBar from "@/components/navigation/TopBar";
 import Navbar from "@/components/navigation/Navbar";
 import Footer from "@/components/navigation/Footer";
 import SocialRail from "@/components/navigation/SocialRail";
+import WhatsAppButton from "@/components/navigation/WhatsAppButton";
 import {
   COMPANY_NAME,
   COMPANY_PHONE,
@@ -113,6 +114,7 @@ export default function RootLayout({ children }) {
         <Navbar />
         {children}
         <SocialRail />
+        <WhatsAppButton />
         <Footer />
       </body>
     </html>
